@@ -1,0 +1,25 @@
+<div class="flex flex-col align-middle items-center" style="background-color: #f6f6f6" *ngIf="article">
+  <img *ngIf="article.picture" src="{{article.picture}}" class="w-full object-cover" style="height: 80vh">
+  <img *ngIf="article.picture == null" src="assets/images/mike-c-valdivia-kZokA2VTKn4-unsplash.jpg" class="w-full object-cover" style="height: 80vh">
+  <div class="md:w-3/5 sm:w-4/5 bg-white  shadow shadow-xl -mt-32 p-12 mb-4 text-center">
+    <label class="text-sm uppercase">{{article.createdAt}}</label>
+    <h1 class="my-8 max-w-full m-auto text-3xl md:text-4xl lg:text-5xl font-medium">{{article.title}}</h1>
+    <p class="text-neutral-700 leading-8">{{article.description}}</p>
+  </div>
+  <section class="font-sans container m-auto flex flex-col md:flex-row py-8 max-w-4xl pr-6 lg:px-0">
+    <div class="w-full leading-normal column-0 lg:column-2 text-justify">
+      <p>{{article.paragraph1}}</p>!
+    </div>
+  </section>
+  <section class="font-sans container m-auto flex flex-col md:flex-row py-8 max-w-4xl pr-6 lg:px-0">
+    <div class="w-full leading-normal column-0 lg:column-2">
+      <p class="text-justify">{{article.paragraph2}}</p>
+    </div>
+  </section>
+
+  <p class="py-12 md:w-5/12 sm:w-4/5 text-right text-red-800 ">Writen by {{article.writer}}</p>
+  <div class="md:5/12 sm:4/5 flex flex-col items-center">
+    <h4 class="my-8 max-w-full m-auto text-3xl md:text-4xl lg:text-5xl font-medium">Read more related articles</h4>
+    <app-latest [country]="article.country.toString()"></app-latest>
+  </div>
+</div>

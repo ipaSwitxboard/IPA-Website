@@ -1,0 +1,9 @@
+<section class="section">
+  <div class="grid">
+    <div *ngFor="let partner of partners" class="item">
+      <a href="{{partner.link}}" target="_parent">
+        <img src="{{partner.pic}}" alt="{{partner.name}}"/>
+      </a>
+    </div>
+  </div>
+</section>

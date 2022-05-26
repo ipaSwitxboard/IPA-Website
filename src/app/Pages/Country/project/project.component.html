@@ -1,0 +1,78 @@
+<div class="flex flex-col align-middle items-center" style="background-color: #f6f6f6" *ngIf="project">
+  <img *ngIf="project.picture" src="https://res.cloudinary.com/switxboard/image/upload/v1652700393/{{project.picture}}" class="w-full object-cover" style="height: 90vh">
+  <img *ngIf="project.picture == null" src="assets/images/jack-stapleton-8lokOUd8tLI-unsplash.jpg" class="w-full object-cover" style="height: 90vh">
+
+  <div class="md:w-3/5 sm:w-4/5 bg-white  shadow shadow-xl -mt-32 p-12 mb-4">
+    <h4 class="text-2xl font-semibold ">IPA SwitxBoard {{project.country}}</h4>
+    <h3 class="text-3xl font-bold text-red-900 mb-5">{{project.title}}</h3>
+    <p class="text-neutral-700 leading-8">{{project.description}}</p>
+  </div>
+  <div class="md:w-3/5 sm:w-4/5 mb-12">
+    <h3 class="text-3xl md:w-7/12 sm:w-full border-4 border-transparent border-l-red-900 font-bold mb-1 pl-4 mt-3">Founders</h3>
+    <p *ngFor="let par of project.familyFounders" class="py-6 px-6  text-neutral-700 text-justify font-light md:w-full sm:w-full leading-8">
+      <b class="font-semibold text-lg">{{par.name}}</b>
+      <br>
+      {{par.description}}
+    </p>
+    <h3 class="text-3xl md:w-7/12 sm:w-full border-4 border-transparent border-l-red-900 font-bold mb-1 pl-4 mt-3">Implementing partners</h3>
+    <p *ngFor="let par of project.founders" class="py-6 px-6  text-neutral-700 text-justify font-light md:w-full sm:w-full leading-8">
+      <b class="font-semibold text-lg">{{par.name}}</b>
+      <br>
+      {{par.description}}
+    </p>
+  </div>
+  <div class="bg-neutral-900 w-full flex flex-col items-center py-8">
+    <div class="md:w-3/5 sm:w-4/5 mt-8 text-white" *ngIf="project.statistics.length != 0">
+      <h3 class="text-3xl border-4 border-transparent border-l-red-900 font-bold mb-4 pl-4">This project Helped several people, here are the statistics</h3>
+      <div class="flex flex-wrap mb-8 justify-around">
+        <div class="md:w-1/5 sm:w-2/5 pb-2 flex flex-col justify-center p-2" *ngFor="let stat of project.statistics">
+          <div class="numbers" id="{{stat}}">
+            <span class="numbers__window">
+              <span class="numbers__window__digit numbers__window__digit--1" data-fake="8395216407">{{stat.amount.toString() | slice:0:1}}</span>
+            </span>
+            <span class="numbers__window">
+              <span class="numbers__window__digit numbers__window__digit--2" data-fake="1640783952">{{stat.amount.toString() | slice:1:2}}</span>
+            </span>
+            <span class="numbers__window" style="width: fit-content">
+              <span class="w-fit">%</span>
+            </span>
+          </div>
+          <p class="font-semibold text-center h-8 ">{{stat.title}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="md:w-3/5 sm:w-4/5 mt-8" *ngIf="project.goals.length != 0">
+    <h3 class="text-3xl border-4 border-transparent border-l-red-900 font-bold mb-4 pl-4">Goals</h3>
+    <p class="py-4 mb-8 px-6  text-neutral-700 text-justify font-light md:w-full sm:w-full leading-8">{{project.goal_intro}}</p>
+    <div class="w-full flex flex-wrap">
+      <div class="flex flex-col items-center justify-center w-1/4 p-3 border-2 border-transparent border-r-neutral-200" *ngFor="let goal of project.goals">
+        <img *ngIf="goal.picture" src="https://res.cloudinary.com/switxboard/image/upload/v1652700393/{{goal.image.filename}}" class="w-4/5 mb-2 h-1/2">
+        <p class="w-4/5 text-center font-light h-1/2">{{goal.description}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="w-full bg-neutral-200 py-5 mt-12 flex flex-col justify-center items-center" *ngIf="project.packages.length !=0">
+    <div class="md:w-3/5 sm:w-4/5 mt-8 min-h-96">
+      <h3 class="text-3xl border-4 border-transparent border-l-red-900 font-bold mb-4 pl-4">Work packages</h3>
+      <div class="flex flex-wrap w-full justify-around">
+        <ol class="flex items-start justify-between w-11/12 p-3 pr-4 list-decimal gap-4 flex-wrap">
+          <div class="package w-full md:w-5/12" *ngFor="let pack of project.packages">
+            <li class="text-lg cursor-pointer hover:border-b-red-300 w-fit">{{pack.pack}}</li>
+            <div class="p-2 bg-red-900 mt-2 flip-in-hor-bottom  swing-in-top-fwd">
+              <p class="text-white py-4 mb-8 px-6 text-justify font-light leading-2">{{pack.description}}</p>
+            </div>
+          </div>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="w-full  py-5 mt-12 flex flex-col justify-center items-center" *ngIf="project.title == 'Harraga'">
+    <div class="md:w-3/5 sm:w-4/5 mt-8 min-h-96">
+    <h3 class="text-3xl border-4 border-transparent border-l-red-900 font-bold mb-4 pl-4">See our latest articles about this project</h3>
+
+    <app-latest  class="w-full" [country]="'Tunisia'"></app-latest>
+    </div>
+  </div>
+
+</div>

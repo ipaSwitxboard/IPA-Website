@@ -1,0 +1,64 @@
+<style>
+  .cta{
+    font-weight: 700;
+    color: white;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+    line-height: 1.5;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    background: transparent;
+    font-size: 20px;
+    display: inline-block;
+  }
+  .field {
+    width: 1228px;
+    margin: 0 auto;
+  }
+  .field-name-field-read-more{
+    background-color: transparent;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 6px;
+  }
+</style>
+<div typeof="" class="ds-1col entity e-curated-content-2 e-variation-default body-format e-news-features view-mode-default  front-page-curated-content" id="front-page-curated-content" style="background-color: #f6f6f6;-webkit-text-size-adjust: 95%;
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
+  font-family: akzidenz-grotesk,Arial,sans-serif;
+  visibility: visible;
+  font-weight: 300;
+  box-sizing: inherit;
+  max-width: none;">
+  <div class="field field-name-field-curated-content-wrapper field-type-entityreference field-label-hidden">
+    <div class="field-items" *ngIf="articles && country">
+      <div class="field-item odd" *ngFor="let art of (articles | countrypipe : country)">
+        <div about="/internal/curated_content_wrapper/1514" typeof="" class="ds-1col entity entity-internal internal-curated-content-wrapper teaser entity node article view-mode-teaser ">
+          <a [routerLink]="['/article', {'id': art.id}]" class="group-link field-group-link">
+            <div class="teaser-image" *ngIf="art.picture">
+              <img src="{{art.picture}}" alt="Artistic camp tatouine" sizes="(min-width: 1208px) 592px, (min-width: 641px) calc(100vw - 3rem), calc(100vw - 2rem)" class="w-full h-4/5 object-cover overflow-hidden ">
+            </div>
+            <div class="teaser-image" *ngIf="art.picture == null">
+              <img src="assets/images/articles/img.png" alt="Artistic camp tatouine" sizes="(min-width: 1208px) 592px, (min-width: 641px) calc(100vw - 3rem), calc(100vw - 2rem)" class="w-full h-4/5 object-cover overflow-hidden ">
+            </div>
+            <div class="teaser-text">
+              <div class="slug">{{art.createdAt}}</div>
+              <h3 class="title">{{art.title}}</h3>
+              <div class="cta">{{art.description}}</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

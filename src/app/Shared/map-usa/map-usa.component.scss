@@ -1,0 +1,25 @@
+svg {
+  margin: 0;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  overflow: hidden;
+  padding: 1vw;
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+  }
+}
+
+path {
+  fill: darkgrey;
+  cursor: pointer;
+}
+path:hover {
+  fill: darkred;
+}
+
+.sm_state_NY{
+  fill: #740B0B;
+}

@@ -1,0 +1,24 @@
+svg {
+  margin: 0;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+  }
+}
+
+path {
+  fill: darkgrey;
+  cursor: pointer;
+}
+path:hover {
+  fill: darkred;
+}
+
+.sm_state_AUT2331{
+  fill: #740B0B;
+}

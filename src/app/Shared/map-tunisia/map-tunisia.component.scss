@@ -1,0 +1,24 @@
+svg {
+  margin: 0;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 1vw;
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+  }
+}
+
+path {
+  fill: whitesmoke;
+  cursor: pointer;
+}
+path:hover {
+  fill: darkred;
+}
+
+.sm_state_TUN98, .sm_state_TUN96, .sm_state_TUN119, .sm_state_TUN116, .sm_state_TUN114, .sm_state_TUN104{
+  fill: #740B0B;
+}

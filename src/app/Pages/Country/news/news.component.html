@@ -1,0 +1,30 @@
+<div class="flex  flex-col justify-center items-center w-full px-8 pb-12 pt-44" style="background-color: #f6f6f6">
+  <div class="w-2/3 flex flex-col justify-center items-center">
+    <div class="px-4 py-8">
+      <h1 class="text-6xl font-bold text-neutral-900 bold">Latest</h1>
+      <div class="flex flex-wrap w-full pt-4">
+        <p class="w-1/2 text-xl leading-relaxed font-light">Here you can find all of our articles, from the latest to the oldest! We are keeping track of all our events and projects here and you can find the same news on our facebook page or instagram or tweeter!</p>
+        <div class="w-1/12"></div>
+        <div class="w-1/5 flex flex-col pl-5 gap-2">
+          <a class="flex gap-2" href="https://www.facebook.com/IPASwitxboard" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                 width="24" height="24"
+                 viewBox="0 0 16 16"
+                 style=" fill:#740b0b;"><path d="M 7.5 1 C 3.9160714 1 1 3.9160714 1 7.5 C 1 11.083929 3.9160714 14 7.5 14 C 11.083929 14 14 11.083929 14 7.5 C 14 3.9160714 11.083929 1 7.5 1 z M 7.5 2 C 10.543488 2 13 4.4565116 13 7.5 C 13 10.266333 10.967571 12.541024 8.3125 12.933594 L 8.3125 9.0898438 L 9.8652344 9.0898438 L 10.109375 7.5136719 L 8.3125 7.5136719 L 8.3125 6.6503906 C 8.3125 5.9953906 8.5256719 5.4140625 9.1386719 5.4140625 L 10.123047 5.4140625 L 10.123047 4.0371094 C 9.9500469 4.0141094 9.5845781 3.9628906 8.8925781 3.9628906 C 7.4485781 3.9628906 6.6015625 4.7258906 6.6015625 6.4628906 L 6.6015625 7.5117188 L 5.1171875 7.5117188 L 5.1171875 9.0898438 L 6.6035156 9.0898438 L 6.6035156 12.919922 C 3.9897868 12.492118 2 10.237066 2 7.5 C 2 4.4565116 4.4565116 2 7.5 2 z"></path></svg>
+            <span class="font-bold">Latest on Facebook</span>
+          </a>
+          <a class="flex gap-2" href="https://www.youtube.com/channel/UCsOUhjygXg9_r2zM9mc1v6Q/featured"  target="_blank">
+            <svg class="w-5"  width="24" height="24" fill="#740b0b"
+                 viewBox="0 0 50 50" aria-hidden="true">
+              <path xmlns="http://www.w3.org/2000/svg" d="M39.256,6.5H9.744C4.371,6.5,0,10.885,0,16.274v16.451c0,5.39,4.371,9.774,9.744,9.774h29.512    c5.373,0,9.744-4.385,9.744-9.774V16.274C49,10.885,44.629,6.5,39.256,6.5z M47,32.726c0,4.287-3.474,7.774-7.744,7.774H9.744    C5.474,40.5,2,37.012,2,32.726V16.274C2,11.988,5.474,8.5,9.744,8.5h29.512c4.27,0,7.744,3.488,7.744,7.774V32.726z"/>
+              <path xmlns="http://www.w3.org/2000/svg" d="M33.36,24.138l-13.855-8.115c-0.308-0.18-0.691-0.183-1.002-0.005S18,16.527,18,16.886v16.229    c0,0.358,0.192,0.69,0.502,0.868c0.154,0.088,0.326,0.132,0.498,0.132c0.175,0,0.349-0.046,0.505-0.137l13.855-8.113    c0.306-0.179,0.495-0.508,0.495-0.863S33.667,24.317,33.36,24.138z M20,31.37V18.63l10.876,6.371L20,31.37z"/>
+            </svg>
+            <span class="font-bold">Latest on YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <app-latest class="w-full" [country]="country"></app-latest>
+  </div>
+
+</div>

@@ -1,0 +1,45 @@
+<div class="content">
+  <div class="formular">
+    <form name="form" [formGroup]="formGroup" (ngSubmit)="submit()">
+      <div class="line flex justify-center">
+        <label class="font-bold pr-6 w-1/2 text-right">
+          <span>My name is</span>
+        </label>
+        <div class="input-field w-1/2 text-left">
+          <input name="name" id="name" placeholder="name" class="bg-transparent text-gray-800" formControlName="name">
+        </div>
+        <div class="clr"></div>
+      </div>
+      <div class="line flex justify-center">
+        <label class="font-bold pr-6 w-1/2 text-right">
+          <span>and please reply to</span>
+        </label>
+        <div class="input-field w-1/2 text-left">
+          <input name="email" id="email" placeholder="email" class="bg-transparent text-gray-800" formControlName="mail">
+        </div>
+        <div class="clr"></div>
+      </div>
+      <div class="line flex justify-center ">
+        <label class="font-bold pr-6 w-1/2 text-right">
+          <span>your message</span>
+        </label>
+        <div class="input-field w-1/2 text-left">
+          <textarea name="message" id="message" placeholder="message" class="bg-transparent text-gray-800" formControlName="message"></textarea>
+        </div>
+        <div class="clr"></div>
+      </div>
+      <button class="globalLink" type="submit" name="submit" style="opacity: 1;">
+        <span>send</span>
+      </button>
+      <div class="messages">
+        <div class="error" style="opacity: 0; transform: translate(-25%, 0%) matrix(1, 0, 0, 1, 0, 0);"></div>
+        <div class="error" style="opacity: 0; transform: translate(-25%, 0%) matrix(1, 0, 0, 1, 0, 0);"></div>
+        <div class="error" style="opacity: 0; transform: translate(-25%, 0%) matrix(1, 0, 0, 1, 0, 0);"></div>
+        <div class="emailSend" style="opacity: 0;">
+          <span>Email succeeded</span>
+        </div>
+      </div>
+      <div class="legals"><span>The personal data collected in this form are processed by IPA SWITXBOARD, controller, to answer your questions, requests for information and complaints. To the extent permitted by law, you have the right to access, rectify, delete and port your personal data. You also have a right to limit and oppose the processing of your data, as well as the possibility to inform us of your instructions regarding the use of your data after your death. You can exercise your rights by writing to contact@switxboard.org . Finally, you can also file a complaint with the CNIL if you were not satisfied with the answers to your requests.<br><br>For more information about our data protection practices, see our <a href="/privacy-policy-en.pdf" target="_blank">data protection policy</a>.</span></div>
+    </form>
+  </div>
+</div>

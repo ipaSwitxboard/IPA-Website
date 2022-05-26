@@ -1,0 +1,7 @@
+<div class="h-screen w-full justify-around items-center">
+  <app-nav-bar-mobile *ngIf="has_navbar()"></app-nav-bar-mobile>
+  <app-nav-bar class="z-100" *ngIf="has_navbar()"></app-nav-bar>
+  <router-outlet class="z-0"></router-outlet>
+  <app-general-contact></app-general-contact>
+</div>
+
